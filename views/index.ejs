@@ -1,0 +1,18 @@
+
+    <p>Pokemons</p>
+    <!-- <a href="/pokemons/new">Add New Pokemon</a> -->
+    <ul>
+      <% for( let i = 0; i < data.length; i++ ) { %>
+      <li>
+        <a href="/pokemons/<%= i %>"> <%= data[i].name%> </a>
+        <a href="/pokemons/<%=i%>/edit">Edit</a>
+        <br />
+        <form action="/pokemons/<%=i%>?_method=DELETE" method="POST">
+        <button>Delete</button>
+        </form>
+      </li>
+      <% } %>
+    </ul>
+  
+
+  
